@@ -3,10 +3,21 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg">
-      <div className="container-md d-flex">
+    <nav className="navbar navbar-expand-lg fixed-top">
+      <div className="container-lg d-flex">
         <h1 className="navbar-brand d-block">NEWPORT</h1>
-        <div className="collapse navbar-collapse d-flex navButtons justify-content-end">
+        <button
+          data-bs-target="#nav"
+          data-bs-toggle="collapse"
+          className="navbar-toggler"
+        >
+          <div className="navbar-toggler-stripes">
+            <span className="stripe"></span>
+            <span className="stripe"></span>
+            <span className="stripe"></span>
+          </div>
+        </button>
+        <div id="nav" className="collapse navbar-collapse justify-content-end">
           <ul className="navbar-nav d-flex justify-content-between">
             <li className="nav-item marginRight">
               <NavLink
@@ -49,7 +60,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-  <a href=""></a>;
 };
 
 export { Navbar };

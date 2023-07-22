@@ -1,28 +1,90 @@
 .navButtons {
-    width : auto;
+  width: auto;
 }
 
 .isActive {
-    color : #222;
-    font-weight: 500;
+  color: #222;
+  font-weight: 500;
 }
 
 .text-decoration-none {
-    color : #888;
+  color: #888;
 }
 
 .navbar-brand {
-    font-size : 2.2rem;
-    font-weight: 400;
-    padding-left : 8rem;
-}
-
-.navButtons {
-    padding-right : 8rem;
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 
 .navbar-nav {
-    .marginRight {
-        margin-right: 3rem;
+  .marginRight {
+    margin-right: 3rem;
+  }
+  @media screen and (max-width: 992px) {
+    background-color: #222;
+    color: rgb(202, 202, 202);
+    text-align: center;
+
+    li {
+      padding: 1rem;
+      transition: background-color 250ms;
+      will-change: background-color;
     }
+
+    li .isActive {
+      color: white;
+    }
+
+    li:hover {
+      background-color: #444;
+      cursor: pointer;
+    }
+
+    .marginRight {
+      margin-right: 0rem;
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  border-radius: 0;
+
+  width: 3rem;
+  height: 3rem;
+
+  transition: background-color 250ms;
+  will-change: background-color;
+
+  .navbar-toggler-stripes {
+    width: 100%;
+    height: 100%;
+
+    padding: 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .stripe {
+      width: 1.75rem;
+      height: 0.25rem;
+      background-color: #222;
+      transition: background-color 250ms;
+      will-change: background-color;
+    }
+  }
+}
+
+.navbar-toggler:focus {
+  border: none;
+  box-shadow: none;
+  background-color: #222;
+
+  .navbar-toggler-stripes {
+    .stripe {
+      background-color: rgb(202, 202, 202);
+    }
+  }
 }
