@@ -13,6 +13,6 @@ const styles = () => {
     .pipe(dest("./src/css/"));
 };
 
-const watcher = () => watch(["./src/sass/*.scss"], styles);
+const watcher = () => watch(["./src/sass/**/*.scss"], styles);
 
 exports.default = series(watcher, styles);
