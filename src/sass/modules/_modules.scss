@@ -87,6 +87,41 @@
   }
 }
 
+.About {
+  margin-bottom: 10rem;
+  .container-lg {
+    img {
+      object-fit: cover;
+      @media screen and (max-width: 992px) {
+        margin-top: 6rem;
+      }
+
+      @media screen and (min-width : 992px) and (max-width : 1140px) {
+        width : 60%;
+      }
+    }
+
+    article {
+      @media screen and (max-width: 992px) {
+        margin-top: 2rem;
+      }
+
+       @media screen and (min-width : 992px) and (max-width : 1140px) {
+        width : 40%;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
 .navbar-toggler:focus {
   border: none;
   box-shadow: none;
