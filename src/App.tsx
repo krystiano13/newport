@@ -5,6 +5,7 @@ import { Blog } from "./views/Blog";
 import { About } from "./views/About";
 
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
