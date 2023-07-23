@@ -1,25 +1,18 @@
-import React from 'react';
-import i1 from '../assets/i1.jpg';
-
+import React from "react";
+import { GalleryData } from "../components/GalleryData";
 export const Gallery = () => {
-    return (
-      <main className="gallery">
-        <div className="container-lg">
-          <div className="row">
-            <div className="col-lg-4 col-md-12">
-              <img src={i1} alt="Clouds" />
-              <p className="lead">Clouds Over Ranier</p>
+  return (
+    <main className="gallery">
+      <div className="container-lg">
+        <div className="row">
+          {GalleryData.map((item) => (
+            <div key={item.id} className="col-lg-4 col-md-12">
+              <img src={item.img} alt={item.title} />
+              <p className="lead">{item.title}</p>
             </div>
-            <div className="col-lg-4 col-md-12">
-              <img src={i1} alt="Clouds" />
-              <p className="lead">Clouds Over Ranier</p>
-            </div>
-            <div className="col-lg-4 col-md-12">
-              <img src={i1} alt="Clouds" />
-              <p className="lead">Clouds Over Ranier</p>
-            </div>
-          </div>
+          ))}
         </div>
-      </main>
-    );
-}
+      </div>
+    </main>
+  );
+};
