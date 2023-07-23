@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const buttonRef = React.useRef<HTMLButtonElement>(null);
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-lg d-flex">
@@ -10,6 +11,10 @@ const Navbar = () => {
           data-bs-target="#nav"
           data-bs-toggle="collapse"
           className="navbar-toggler"
+          ref={buttonRef}
+          onClick={(e) => {
+            buttonRef.current?.classList.toggle("ntActive");
+          }}
         >
           <div className="navbar-toggler-stripes">
             <span className="stripe"></span>

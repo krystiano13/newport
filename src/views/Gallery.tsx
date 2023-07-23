@@ -1,5 +1,11 @@
 import React from 'react';
 
 export const Gallery = () => {
-    return <h1></h1>
+    return <main className='gallery'>
+        <div className='container-lg'>
+            <div className='row'>
+                
+            </div>
+        </div>
+    </main>
 }
