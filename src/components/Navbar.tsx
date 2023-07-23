@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const buttonRef = React.useRef<HTMLButtonElement>(null);
   return (
-    <nav className="navbar navbar-expand-lg fixed-top">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-lg d-flex">
         <h1 className="navbar-brand d-block">NEWPORT</h1>
         <button
