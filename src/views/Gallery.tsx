@@ -1,5 +1,6 @@
 import React from "react";
 import { GalleryData } from "../components/GalleryData";
+
 export const Gallery = () => {
   return (
     <main className="gallery">

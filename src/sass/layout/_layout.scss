@@ -26,6 +26,14 @@
     width: 18rem;
     height: 18rem;
     object-fit: cover;
+
+    transition: 250ms transform;
+    will-change: transform;
+  }
+
+  img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
   }
 
   p {
