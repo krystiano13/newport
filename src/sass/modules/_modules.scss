@@ -123,10 +123,10 @@
 }
 
 .Blog {
-  @media screen and (max-width : 992px) {
-     margin-top : 10rem;
+  @media screen and (max-width: 992px) {
+    margin-top: 10rem;
   }
-  height : auto;
+  height: auto;
   .container-lg {
     .row {
       .col-12 {
@@ -146,4 +146,44 @@
 .navbar-toggler:focus {
   border: none;
   box-shadow: none;
+}
+
+.ImageView {
+  margin-bottom: 5rem;
+  .container-lg {
+    .left {
+      width: 40%;
+      padding: 1rem;
+      padding-top: 0rem;
+      padding-left: 0rem;
+
+      h2 {
+        font-size: 2rem;
+
+        @media screen and (min-width: 2500px) {
+          font-size: 2.25rem;
+        }
+        @media screen and (min-width: 3200px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        max-width: 100%;
+
+        @media screen and (min-width: 2500px) {
+          font-size: 1.12rem;
+        }
+        @media screen and (min-width: 3200px) {
+          font-size: 1.55rem;
+        }
+      }
+    }
+
+    img {
+      width: 55%;
+      height: 80%;
+    }
+  }
 }
