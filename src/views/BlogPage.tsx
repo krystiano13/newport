@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { BlogData } from "../components/BlogData";
 
-const BlogPage: React.FC<{ title: string }> = ({ title }) => {
+interface BlogPageInterface {
+  title: string;
+  setTitle: (title: string) => void;
+}
+
+const BlogPage: React.FC<BlogPageInterface> = ({ title, setTitle }) => {
+  const navigate = useNavigate();
   return (
     <main className="BlogPage container-lg">
       <div className="row">
@@ -41,7 +48,14 @@ const BlogPage: React.FC<{ title: string }> = ({ title }) => {
         <aside className="col-lg-2 col-md-12">
           {BlogData.map((item) => (
             <div className="article">
-              <h3 className="text-end">{item.title}</h3>
+              <h3
+                onClick={() => {
+                  setTitle(item.title);
+                }}
+                className="text-end"
+              >
+                {item.title}
+              </h3>
               <p className="text-end">JUNE 26 2020</p>
             </div>
           ))}

@@ -16,9 +16,20 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Gallery />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route
+          path="/blog"
+          element={<Blog setTitle={(title: string) => setTitle(title)} />}
+        />
         <Route path="/about" element={<About />} />
-        <Route path="/blog/page" element={<BlogPage title={title} />} />
+        <Route
+          path="/blog/page"
+          element={
+            <BlogPage
+              setTitle={(title: string) => setTitle(title)}
+              title={title}
+            />
+          }
+        />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -247,6 +247,8 @@
   aside {
     h2 {
       font-size: 1.6rem;
+      transition: 250ms color;
+      will-change: color;
 
       @media screen and (min-width: 2400px) {
         font-size: 1.8rem;
@@ -265,12 +267,14 @@
       }
 
       @media screen and (min-width: 3200px) {
-        font-size:1.8rem;
+        font-size: 1.8rem;
       }
     }
 
     h3 {
       font-size: 1.2rem;
+      transition: 250ms color;
+      will-change: color;
 
       @media screen and (min-width: 2400px) {
         font-size: 1.4rem;
@@ -279,6 +283,11 @@
       @media screen and (min-width: 3200px) {
         font-size: 2rem;
       }
+    }
+    h2:hover,
+    h3:hover {
+      cursor: pointer;
+      color: rgb(155, 13, 13);
     }
   }
 }
