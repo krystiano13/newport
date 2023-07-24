@@ -5,11 +5,11 @@ const BlogPage: React.FC<{ title: string }> = ({ title }) => {
   return (
     <main className="BlogPage container-lg">
       <div className="row">
-        <aside className="col-2">
+        <aside className="col-lg-2 col-md-12">
           <h2 className="title">{title}</h2>
           <p className="lead">JUNE 26 2020</p>
         </aside>
-        <article className="col-8">
+        <article className="col-lg-8 col-md-12">
           <p>
             Nunc at orci aliquet, ornare ex at, dignissim lacus. Aenean ipsum
             justo, maximus eget maximus vel, efficitur ut dui. Donec sit amet mi
@@ -38,7 +38,7 @@ const BlogPage: React.FC<{ title: string }> = ({ title }) => {
             quam non vestibulum.
           </p>
         </article>
-        <aside className="col-2">
+        <aside className="col-lg-2 col-md-12">
           {BlogData.map((item) => (
             <div className="article">
               <h3 className="text-end">{item.title}</h3>
